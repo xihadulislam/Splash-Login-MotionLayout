@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:autoTransition="animateToEnd"
+        motion:constraintSetEnd="@layout/login_main"
+        motion:constraintSetStart="@layout/splash_main"
+        motion:duration="5000">
+        <KeyFrameSet>
+
+            <KeyPosition
+                motion:framePosition="65"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/logo"
+                motion:percentX="0"
+                motion:percentY="0" />
+
+            <KeyPosition
+                motion:framePosition="65"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/logo_rays"
+                motion:percentX="0"
+                motion:percentY="0" />
+
+            <KeyAttribute
+                android:rotation="0"
+                motion:framePosition="0"
+                motion:motionTarget="@+id/logo_rays" />
+
+            <KeyAttribute
+                android:rotation="180"
+                motion:framePosition="80"
+                motion:motionTarget="@+id/logo_rays" />
+
+
+            <KeyPosition
+                motion:framePosition="75"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/cloud_left"
+                motion:percentX="0"
+                motion:percentY="0" />
+
+            <KeyPosition
+                motion:framePosition="75"
+                motion:keyPositionType="deltaRelative"
+                motion:motionTarget="@+id/cloud_right"
+                motion:percentX="0"
+                motion:percentY="0" />
+
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="80"
+                motion:motionTarget="@+id/linlay_inputs" />
+
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="80"
+                motion:motionTarget="@+id/tv_forgotPassword" />
+
+
+            <KeyPosition
+                motion:framePosition="80"
+                motion:motionTarget="@+id/tv_register"
+                motion:percentX="0"
+                motion:percentY="0" />
+
+
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet
+        android:id="@+id/start"
+        android:layout="@layout/splash_main">
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/end"
+        android:layout="@layout/login_main" />
+</MotionScene>
